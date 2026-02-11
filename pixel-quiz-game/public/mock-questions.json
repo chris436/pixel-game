@@ -1,0 +1,57 @@
+[
+  {
+    "id": "1",
+    "question": "What is the capital of 8-bit?",
+    "options": [
+      "Pixel City",
+      "Voxel Town",
+      "Sprite Village",
+      "Bitburg"
+    ],
+    "temp_answer": "Pixel City"
+  },
+  {
+    "id": "2",
+    "question": "Which color is #FF0000?",
+    "options": [
+      "Blue",
+      "Green",
+      "Red",
+      "Yellow"
+    ],
+    "temp_answer": "Red"
+  },
+  {
+    "id": "3",
+    "question": "What does CSS stand for?",
+    "options": [
+      "Cascading Style Sheets",
+      "Creative Style System",
+      "Computer Style Sheets",
+      "Colorful Style Sheets"
+    ],
+    "temp_answer": "Cascading Style Sheets"
+  },
+  {
+    "id": "4",
+    "question": "Which tag is used for the largest heading?",
+    "options": [
+      "<h6>",
+      "<head>",
+      "<h1>",
+      "<header>"
+    ],
+    "temp_answer": "<h1>"
+  },
+  {
+    "id": "5",
+    "question": "In React, what function manages state?",
+    "options": [
+      "useEffect",
+      "useState",
+      "useContext",
+      "useReducer"
+    ],
+    "temp_answer": "useState"
+  }
+]

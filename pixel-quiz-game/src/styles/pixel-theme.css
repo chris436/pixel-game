@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --pixel-bg: #2d2d2d;
+  --pixel-fg: #dcdcdc;
+  --pixel-accent: #ff0055;
+  --pixel-success: #00e436;
+  --pixel-warning: #ffcc00;
+  --pixel-border: #ffffff;
+  --crt-scanline: rgba(18, 16, 16, 0.1);
+  --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: var(--pixel-fg);
+  font-family: 'Press Start 2P', monospace;
+  overflow: hidden; /* Prevent scroll for full game feel */
+  user-select: none;
+}
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* CRT Screen Effect */
+.crt-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.25) 50%
+  ), linear-gradient(
+    90deg, 
+    rgba(255, 0, 0, 0.06), 
+    rgba(0, 255, 0, 0.02), 
+    rgba(0, 0, 255, 0.06)
+  );
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+
+/* Base Pixel Card */
+.pixel-card {
+  background: var(--pixel-bg);
+  border: 4px solid var(--pixel-border);
+  box-shadow: 8px 8px 0 var(--shadow-color);
+  padding: 2rem;
+  image-rendering: pixelated;
+  position: relative;
+  max-width: 600px;
+  width: 90%;
+}
+
+/* Pixel Button */
+.pixel-btn {
+  background: var(--pixel-fg);
+  color: var(--pixel-bg);
+  border: 4px solid var(--pixel-bg);
+  box-shadow: 
+    -4px -4px 0 var(--pixel-border), 
+    4px 4px 0 var(--shadow-color);
+  padding: 10px 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 10px;
+  transition: transform 0.1s;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.pixel-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: none;
+}
+
+.pixel-btn:hover {
+  background: var(--pixel-accent);
+  color: #fff;
+}
+
+.pixel-input {
+  background: #000;
+  color: var(--pixel-success);
+  border: 4px solid var(--pixel-fg);
+  padding: 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  outline: none;
+  text-align: center;
+}
+
+.pixel-input:focus {
+  border-color: var(--pixel-accent);
+}
+
+/* Utility */
+.text-center { text-align: center; }
+.flex-col { display: flex; flex-direction: column; gap: 1rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+
+/* Avatar Frame */
+.avatar-frame {
+  border: 4px solid var(--pixel-border);
+  background: #fff;
+  display: inline-block;
+  padding: 4px;
+  margin-bottom: 1rem;
+  box-shadow: 4px 4px 0 var(--shadow-color);
+}
