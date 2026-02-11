@@ -5,6 +5,10 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
+defaults:
+  run:
+    working-directory: ./pixel-quiz-game
+
 permissions:
   contents: read
   pages: write
@@ -41,7 +45,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./dist
+          path: ./pixel-quiz-game/dist
 
   deploy:
     environment:
